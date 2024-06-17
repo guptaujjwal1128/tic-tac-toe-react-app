@@ -1,0 +1,8 @@
+$board-size: 3;
+
+.board {
+  display: grid;
+  grid-template-rows: repeat($board-size, 1fr);
+  grid-template-columns: repeat($board-size, 1fr);
+  gap: 1rem;
+}

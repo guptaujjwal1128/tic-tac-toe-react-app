@@ -1,0 +1,81 @@
+/****** RESET START ******/
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+
+/*
+  3. Good defaults
+  4. Typographic tweaks!
+*/
+html,
+body {
+  min-height: 100vh; /* Ensure the body takes up the full height of the viewport */
+  line-height: 1.5; /* Set a comfortable line height for readability */
+  box-sizing: border-box; // default is content box
+  /*
+    * The browser will use a fallback font immediately if the custom font is not available.
+    * If the custom font loads within a short period, it will replace the fallback font.
+    * If the custom font does not load quickly, the fallback 
+      font will continue to be used, and the custom font will not be applied.
+  */
+  font-display: optional; // default is auto
+  -webkit-font-smoothing: antialiased; /* Improve text rendering on webkit browsers */
+}
+/*
+  5. Set shorter line heights on headings and interactive elements
+*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+/*
+  6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}

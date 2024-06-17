@@ -1,0 +1,26 @@
+.square {
+  min-height: 3rem;
+  min-width: 5rem;
+  background-color: rgba(100, 100, 100, 1);
+  color: white;
+  font-weight: 600;
+  font-size: 1.5rem;
+  box-shadow: none;
+  border: none;
+  &:hover,
+  &:focus {
+    background-color: rgba(100, 100, 100, 0.7);
+  }
+  &:active.allowed {
+    background-color: green;
+  }
+  &:active.not-allowed {
+    background-color: red;
+  }
+  //   &:active {
+  //     background-color: blue;
+  //   }
+  //   &:focus {
+  //     background-color: green;
+  //   }
+}

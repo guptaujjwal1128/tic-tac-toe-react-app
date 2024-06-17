@@ -1,0 +1,62 @@
+.game {
+  display: flex;
+  width: 100%;
+  max-width: 50rem;
+  min-height: 30rem;
+  &-board {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    border: 1px dashed black;
+    padding: 1rem;
+    &-message {
+      color: rgb(108, 50, 50);
+      font-size: 0.8rem;
+    }
+    &-result.active {
+      animation: scaleUp 3s linear;
+    }
+    &-reset {
+      @include mixins.primary-button();
+    }
+  }
+  &-history {
+    flex: 1;
+    border: 1px dashed black;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+    h2 {
+      text-align: center;
+    }
+    &-list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      &-item {
+        @include mixins.primary-button();
+      }
+    }
+  }
+}
+
+@include mixins.mobile {
+  .game {
+    flex-direction: column;
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(5);
+  }
+}
